@@ -1,9 +1,9 @@
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/EwItsCaydon/Fluent-Ui-Modded/refs/heads/main/save%20manager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/EwItsCaydon/Fluent-Ui-Modded/refs/heads/main/interface%20manager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "Project Saturn",
+    Title = " [🐟] Fisch | Project Saturn",
     SubTitle = "by Im_Sa7urn",
     TabWidth = 160,
     Size = UDim2.fromOffset(650, 550),
