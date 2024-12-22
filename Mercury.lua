@@ -14,7 +14,7 @@ local DisplayDay2 = nil
 local DisplayYear = nil
 DisplayMinute = nil
 
-function UpdateTime()
+function UpdateTime()  
     Date = DateTime.now():ToLocalTime()
     DisplayDay = os.date("%A")
     DisplayMonth = os.date("%B")
@@ -34,7 +34,9 @@ function UpdateTime()
     end
 end
 
-UpdateTime()
+repeat task.wait()
+	UpdateTime()
+until Date ~= nil
 
 local greeting = nil
 
