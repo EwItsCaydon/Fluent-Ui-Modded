@@ -719,7 +719,7 @@ function Library:create(options)
 		BackgroundTransparency = 1,
 		Position = UDim2.new(0, 5, 0.5, 0),
 		Size = UDim2.new(0, 15, 0, 15),
-		Image = "http://www.roblox.com/asset/?id=85200853940154",
+		Image = "http://www.roblox.com/asset/?id=132443680842821",
 		Theme = {ImageColor3 = "StrongText"}
 	})
 
@@ -1099,7 +1099,7 @@ end
 function Library:tab(options)
 	options = self:set_defaults({
 		Name = "New Tab",
-		Icon = "rbxassetid://85200853940154"
+		Icon = "rbxassetid://132443680842821"
 	}, options)
 
 	local tab = self.container:object("ScrollingFrame", {
