@@ -12,7 +12,8 @@ local DisplayDay = nil
 local DisplayMonth = nil
 local DisplayDay2 = nil
 local DisplayYear = nil
-DisplayMinute = nil
+local DisplayMinute = nil
+local DisplayHour = nil
 
 function UpdateTime()  
     Date = DateTime.now():ToLocalTime()
@@ -25,6 +26,12 @@ function UpdateTime()
         DisplayMinute = "0" .. Date.Minute
     else
         DisplayMinute = Date.Minute
+    end
+
+	if Date.Hour == 0 then
+        DisplayHour = 12
+    else
+        DisplayHour = Date.Hour
     end
 
     if Date.Hour > 12 then
