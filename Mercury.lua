@@ -46,7 +46,7 @@ elseif Date.Hour >= 12 and Date.Hour < 17 then
     greeting = "Afternoon, "
 elseif Date.Hour >= 17 and Date.Hour < 24 then
     greeting = "Evening, "
-elseif Date.Hour >= 0 and Date.Time < 5 then
+elseif Date.Hour >= 0 and Date.Hour < 5 then
     greeting = "Night, "
 else
     greeting = "Welcome, "
