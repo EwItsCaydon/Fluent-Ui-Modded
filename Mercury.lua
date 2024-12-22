@@ -7,6 +7,13 @@ local Mouse = LocalPlayer:GetMouse()
 local HTTPService = game:GetService("HttpService")
 
 local Date = DateTime.now():ToLocalTime()
+local DisplayTime = nil
+
+if Date.Hour > 12 then
+    DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute
+else
+    DisplayTime = Date.Hour .. ":" .. Date.Minute
+end
 
 local greeting = nil
 
@@ -799,7 +806,7 @@ function Library:create(options)
 		Theme = {TextColor3 = {"WeakText", -20}},
 		TextScaled = true,
 		TextXAlignment = Enum.TextXAlignment.Left,
-		Text = tostring(Date)
+		Text = DisplayTime
 	})
 
 	do
