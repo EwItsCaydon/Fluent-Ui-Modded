@@ -39,13 +39,13 @@ UpdateTime()
 local greeting = nil
 
 if Date.Hour >= 5 and Date.Hour < 12 then
-    greeting = "Good Morning, "
+    greeting = "Morning, "
 elseif Date.Hour >= 12 and Date.Hour < 17 then
-    greeting = "Good Afternoon, "
+    greeting = "Afternoon, "
 elseif Date.Hour >= 17 and Date.Hour < 24 then
-    greeting = "Good Evening, "
+    greeting = "Evening, "
 elseif Date.Hour >= 0 and Date.Time < 5 then
-    greeting = "Good Night, "
+    greeting = "Night, "
 else
     greeting = "Welcome, "
 end
