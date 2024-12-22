@@ -719,7 +719,7 @@ function Library:create(options)
 		BackgroundTransparency = 1,
 		Position = UDim2.new(0, 5, 0.5, 0),
 		Size = UDim2.new(0, 15, 0, 15),
-		Image = "rbxassetid://132443680842821",
+		Image = "rbxassetid://85200853940154",
 		Theme = {ImageColor3 = "StrongText"}
 	})
 
