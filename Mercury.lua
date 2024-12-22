@@ -9,11 +9,15 @@ local HTTPService = game:GetService("HttpService")
 local Date = DateTime.now():ToLocalTime()
 local DisplayTime = nil
 
-if Date.Hour > 12 then
-    DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute
-else
-    DisplayTime = Date.Hour .. ":" .. Date.Minute
+function UpdateTime()
+    if Date.Hour > 12 then
+        DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute
+    else
+        DisplayTime = Date.Hour .. ":" .. Date.Minute
+    end
 end
+
+UpdateTime()
 
 local greeting = nil
 
@@ -814,10 +818,10 @@ function Library:create(options)
 		local counter = 0
 		RunService.Heartbeat:Connect(function(step)
 			counter += step  
+            Date = DateTime.now():ToLocalTime()
 			if counter >= desiredInterval then
 				counter -= desiredInterval
-				local date = tostring(os.date("%X"))
-				timeDisplay.Text = date:sub(1, date:len()-3)
+				timeDisplay.Text = DisplayTime
 			end
 		end)
 	end
