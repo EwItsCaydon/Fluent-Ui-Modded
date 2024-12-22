@@ -810,7 +810,7 @@ function Library:create(options)
 	end
 
 	local profileName = profile:object("TextLabel", {
-		Text = "Premium",
+		Text = "Premium - Lifetime",
 		TextScaled = true,
 		Position = UDim2.new(0, 105,0, 47),
 		Theme = {TextColor3 = "Tertiary"},
@@ -926,7 +926,7 @@ function Library:create(options)
 		Name = "UI Drag Speed",
 		Description = "How smooth the dragging looks.",
 		Max = 20,
-		Default = 14,
+		Default = 8,
 		Callback = function(value)
 			Library.DragSpeed = (20 - value)/100
 		end,
