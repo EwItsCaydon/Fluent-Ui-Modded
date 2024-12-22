@@ -12,10 +12,10 @@ local DisplayDay = nil
 local DisplayMonth = nil
 local DisplayDay2 = nil
 local DisplayYear = nil
+DisplayMinute = nil
 
 function UpdateTime()
     Date = DateTime.now():ToLocalTime()
-    DisplayMinute = nil
     DisplayDay = os.date("%A")
     DisplayMonth = os.date("%B")
     DisplayDay2 = os.date("%d")
