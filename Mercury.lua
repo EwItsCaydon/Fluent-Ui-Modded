@@ -34,8 +34,8 @@ function UpdateTime()
         DisplayHour = Date.Hour
     end
 
-    if Date.Hour > 12 and Date.Hour ~= 0 then
-        DisplayTime = DisplayHour - 12 .. ":" .. DisplayMinute.. " pm, ".. DisplayDay..", "..DisplayMonth.." ".. DisplayDay2 .. ", " .. DisplayYear
+    if Date.Hour > 12 or Date.Hour == 0 then
+        DisplayTime = DisplayHour - 12 .. ":" .. DisplayMinute.. " am, ".. DisplayDay..", "..DisplayMonth.." ".. DisplayDay2 .. ", " .. DisplayYear
     else
         DisplayTime = DisplayHour .. ":" .. DisplayMinute.. " pm, ".. DisplayDay..", "..DisplayMonth.." ".. DisplayDay2 .. ", " .. DisplayYear
     end
