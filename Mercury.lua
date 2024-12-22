@@ -20,9 +20,9 @@ function UpdateTime()
     DisplayDay2 = os.date("%d")
     DisplayYear = os.date("%Y")
     if Date.Hour > 12 then
-        DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute.. " p.m.".." " .. DisplayDay..", "..DisplayMonth.." ".. DisplayDay2 .. ", " .. DisplayYear
+        DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute.. " pm, ".. DisplayDay..", "..DisplayMonth.." ".. DisplayDay2 .. ", " .. DisplayYear
     else
-        DisplayTime = Date.Hour .. ":" .. Date.Minute.. " p.m.".." " .. DisplayDay..", "..DisplayMonth.." ".. DisplayDay2 .. ", " .. DisplayYear
+        DisplayTime = Date.Hour .. ":" .. Date.Minute.. " pm, ".. DisplayDay..", "..DisplayMonth.." ".. DisplayDay2 .. ", " .. DisplayYear
     end
 end
 
