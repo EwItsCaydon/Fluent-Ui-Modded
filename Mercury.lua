@@ -1839,7 +1839,7 @@ function Library:button(options)
 		BackgroundTransparency = 1,
 		Position = UDim2.new(1, -11, 0.5, 0),
 		Size = UDim2.fromOffset(26, 26),
-		Image = "rbxassetid://110743212392098",
+		Image = "rbxassetid://8498776661",
 		Theme = {ImageColor3 = "Tertiary"}
 	})
 
@@ -1929,7 +1929,7 @@ function Library:color_picker(options)
 		BackgroundTransparency = 1,
 		Position = UDim2.new(1, -11, 0.5, 0),
 		Size = UDim2.fromOffset(26, 26),
-		Image = "rbxassetid://8604555937",
+		Image = "rbxassetid://110743212392098",
 		ImageColor3 = Library.CurrentTheme.Tertiary
 	})
 
