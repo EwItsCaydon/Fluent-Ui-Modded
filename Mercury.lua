@@ -15,14 +15,22 @@ local DisplayYear = nil
 
 function UpdateTime()
     Date = DateTime.now():ToLocalTime()
+    DisplayMinute = nil
     DisplayDay = os.date("%A")
     DisplayMonth = os.date("%B")
     DisplayDay2 = os.date("%d")
     DisplayYear = os.date("%Y")
-    if Date.Hour > 12 then
-        DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute.. " pm, ".. DisplayDay..", "..DisplayMonth.." ".. DisplayDay2 .. ", " .. DisplayYear
+
+    if Date.Minute < 10 then
+        DisplayMinute = "0" .. Date.Minute
     else
-        DisplayTime = Date.Hour .. ":" .. Date.Minute.. " pm, ".. DisplayDay..", "..DisplayMonth.." ".. DisplayDay2 .. ", " .. DisplayYear
+        DisplayMinute = Date.Minute
+    end
+
+    if Date.Hour > 12 then
+        DisplayTime = Date.Hour - 12 .. ":" .. DisplayMinute.. " pm, ".. DisplayDay..", "..DisplayMonth.." ".. DisplayDay2 .. ", " .. DisplayYear
+    else
+        DisplayTime = Date.Hour .. ":" .. DisplayMinute.. " pm, ".. DisplayDay..", "..DisplayMonth.." ".. DisplayDay2 .. ", " .. DisplayYear
     end
 end
 
