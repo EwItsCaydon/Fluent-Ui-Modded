@@ -8,15 +8,15 @@ local HTTPService = game:GetService("HttpService")
 
 local Date = nil
 local DisplayTime = nil
+local DisplayDate = os.date()
 
 function UpdateTime()
     Date = DateTime.now():ToLocalTime()
     if Date.Hour > 12 then
-        DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute.. " p.m."
+        DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute.. " p.m.".." " .. DisplayDate
     else
-        DisplayTime = Date.Hour .. ":" .. Date.Minute .. " a.m."
+        DisplayTime = Date.Hour .. ":" .. Date.Minute .. " a.m.".." " .. DisplayDate
     end
-    print("Updated Display Time On Home Page")
 end
 
 UpdateTime()
