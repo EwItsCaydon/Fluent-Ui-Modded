@@ -8,15 +8,21 @@ local HTTPService = game:GetService("HttpService")
 
 local Date = nil
 local DisplayTime = nil
-local DisplayDate = nil
+local DisplayDay = nil
+local DisplayMonth = nil
+local DisplayDay2 = nil
+local DisplayYear = nil
 
 function UpdateTime()
     Date = DateTime.now():ToLocalTime()
-    DisplayDate = os.date()
+    DisplayDay = os.date("%A")
+    DisplayMonth = os.date("%B")
+    DisplayDay2 = os.date("%d")
+    DisplayYear = os.date("%Y")
     if Date.Hour > 12 then
-        DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute.. " p.m.".." " .. DisplayDate
+        DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute.. " p.m.".." " .. DisplayDay.." "..DisplayMonth.." ".. DisplayDay2 .. " " .. DisplayYear
     else
-        DisplayTime = Date.Hour .. ":" .. Date.Minute .. " a.m.".." " .. DisplayDate
+        DisplayTime = Date.Hour .. ":" .. Date.Minute.. " p.m.".." " .. DisplayDay.." "..DisplayMonth.." ".. DisplayDay2 .. " " .. DisplayYear
     end
 end
 
