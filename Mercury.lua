@@ -6,10 +6,11 @@ local LocalPlayer = Players.LocalPlayer
 local Mouse = LocalPlayer:GetMouse()
 local HTTPService = game:GetService("HttpService")
 
-local Date = DateTime.now():ToLocalTime()
+local Date = nil
 local DisplayTime = nil
 
 function UpdateTime()
+    Date = DateTime.now():ToLocalTime()
     if Date.Hour > 12 then
         DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute
     else
@@ -818,7 +819,7 @@ function Library:create(options)
 		local counter = 0
 		RunService.Heartbeat:Connect(function(step)
 			counter += step  
-            Date = DateTime.now():ToLocalTime()
+            UpdateTime()
 			if counter >= desiredInterval then
 				counter -= desiredInterval
 				timeDisplay.Text = DisplayTime
