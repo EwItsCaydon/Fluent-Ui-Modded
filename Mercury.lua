@@ -12,9 +12,9 @@ local DisplayTime = nil
 function UpdateTime()
     Date = DateTime.now():ToLocalTime()
     if Date.Hour > 12 then
-        DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute
+        DisplayTime = Date.Hour - 12 .. ":" .. Date.Minute.. "p.m."
     else
-        DisplayTime = Date.Hour .. ":" .. Date.Minute
+        DisplayTime = Date.Hour .. ":" .. Date.Minute .. "a.m."
     end
 end
 
