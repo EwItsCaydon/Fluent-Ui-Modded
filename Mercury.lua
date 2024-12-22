@@ -989,7 +989,7 @@ function Library:notification(options)
 		BackgroundTransparency = 1,
 		Size = UDim2.new(1, 70,1, 70),
 		ZIndex = 0,
-		Image = "rbxassetid://110743212392098",
+		Image = "rbxassetid://6014261993",
 		ImageColor3 = Color3.fromRGB(0,0,0),
 		ImageTransparency = 1,
 		ScaleType = Enum.ScaleType.Slice,
@@ -1099,7 +1099,7 @@ end
 function Library:tab(options)
 	options = self:set_defaults({
 		Name = "New Tab",
-		Icon = "rbxassetid://8569322835"
+		Icon = "rbxassetid://110743212392098"
 	}, options)
 
 	local tab = self.container:object("ScrollingFrame", {
