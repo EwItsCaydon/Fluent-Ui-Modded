@@ -16,6 +16,7 @@ function UpdateTime()
     else
         DisplayTime = Date.Hour .. ":" .. Date.Minute .. "a.m."
     end
+    print("Updated Display Time On Home Page")
 end
 
 UpdateTime()
@@ -819,9 +820,9 @@ function Library:create(options)
 		local counter = 0
 		RunService.Heartbeat:Connect(function(step)
 			counter += step  
-            UpdateTime()
 			if counter >= desiredInterval then
 				counter -= desiredInterval
+                UpdateTime()
 				timeDisplay.Text = DisplayTime
 			end
 		end)
