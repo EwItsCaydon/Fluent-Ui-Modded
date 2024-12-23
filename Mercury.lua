@@ -3475,7 +3475,7 @@ function Library:textbox(options)
 		AnchorPoint = Vector2.new(1, 0.5),
 		BackgroundTransparency = 1,
 		Position = UDim2.new(1, -13, 0.5, 0),
-		Size = UDim2.new(0, 16, 0, 16),
+		Size = UDim2.new(0, 20, 0, 20),
 		Theme = {ImageColor3 = "StrongText"}
 	})
 
