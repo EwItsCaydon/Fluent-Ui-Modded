@@ -450,14 +450,14 @@ function Library:create(options)
 	}
 
 	if readfile and writefile and isfile then
-		if not isfile("MercurySettings.json") then
-			writefile("MercurySettings.json", HTTPService:JSONEncode(settings))
+		if not isfile("ProjectSaturnUiSettings.json") then
+			writefile("ProjectSaturnUiSettings.json", HTTPService:JSONEncode(settings))
 		end
-		settings = HTTPService:JSONDecode(readfile("MercurySettings.json"))
+		settings = HTTPService:JSONDecode(readfile("ProjectSaturnUiSettings.json"))
 		Library.CurrentTheme = Library.Themes[settings.Theme]
 		updateSettings = function(property, value)
 			settings[property] = value
-			writefile("MercurySettings.json", HTTPService:JSONEncode(settings))
+			writefile("ProjectSaturnUiSettings.json", HTTPService:JSONEncode(settings))
 		end
 	end
 
@@ -3471,7 +3471,7 @@ function Library:textbox(options)
 	}):round(5):stroke("Tertiary")
 
 	local writeIcon = textboxContainer:object("ImageLabel", {
-		Image = "http://www.roblox.com/asset/?id=8569329416",
+		Image = "http://www.roblox.com/asset/?id=93715286866190",
 		AnchorPoint = Vector2.new(1, 0.5),
 		BackgroundTransparency = 1,
 		Position = UDim2.new(1, -13, 0.5, 0),
